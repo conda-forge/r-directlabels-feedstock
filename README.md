@@ -20,10 +20,10 @@ Current build status
 
 Current release info
 ====================
-[![Conda Recipe](https://img.shields.io/badge/recipe-r--directlabels-green.svg)](https://anaconda.org/conda-forge/r-directlabels)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-directlabels.svg)](https://anaconda.org/conda-forge/r-directlabels)
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-directlabels.svg)](https://anaconda.org/conda-forge/r-directlabels)
-[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-directlabels.svg)](https://anaconda.org/conda-forge/r-directlabels)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--directlabels-green.svg)](https://anaconda.org/conda-forge/r-directlabels) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-directlabels.svg)](https://anaconda.org/conda-forge/r-directlabels) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-directlabels.svg)](https://anaconda.org/conda-forge/r-directlabels) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-directlabels.svg)](https://anaconda.org/conda-forge/r-directlabels) |
 
 Installing r-directlabels
 =========================

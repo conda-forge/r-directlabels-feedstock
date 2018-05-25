@@ -1,4 +1,4 @@
-{% set version = '2017.03.31' %}
+{% set version = "2018.05.22" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/directlabels_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/directlabels/directlabels_{{ version }}.tar.gz
-  sha256: f9265e55be4107bacce66217f71a61847316e1b310e9100ce5df565318e05005
+  sha256: 9b2e780410bc7812fe155afba9181653293ca657b0b10e1618242dad4d619775
 
 build:
   number: 0

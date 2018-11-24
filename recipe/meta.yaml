@@ -15,8 +15,8 @@ source:
   sha256: 9b2e780410bc7812fe155afba9181653293ca657b0b10e1618242dad4d619775
 
 build:
-  number: 1
-  skip: true  # [win32]
+  noarch: generic
+  number: 1001
 
   rpaths:
     - lib/R/lib/
@@ -40,8 +40,7 @@ about:
   home: http://directlabels.r-forge.r-project.org/
   license: GPL-3
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
   summary: An extensible framework for automatically placing direct labels onto multicolor 'lattice'
     or 'ggplot2' plots. Label positions are described using Positioning Methods which
     can be re-used across several different plots. There are heuristics for examining

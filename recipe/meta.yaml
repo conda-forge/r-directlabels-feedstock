@@ -1,5 +1,4 @@
-{% set version = "2020.1.31" %}
-
+{% set version = '2020.1.31' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,51 +7,64 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: directlabels_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/directlabels_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/directlabels/directlabels_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/directlabels_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/directlabels/directlabels_{{ version }}.tar.gz
   sha256: cce858bfb70cd9effbf903c3bffc6e0272f87170002bc9a1eac82e72b97d4123
 
 build:
-  noarch: generic
+  merge_build_host: True  # [win]
   number: 0
-
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-quadprog
-
   run:
     - r-base
     - r-quadprog
 
 test:
   commands:
-    - $R -e "library('directlabels')"  # [not win]
+    - $R -e "library('directlabels')"           # [not win]
     - "\"%R%\" -e \"library('directlabels')\""  # [win]
 
 about:
-  home: http://directlabels.r-forge.r-project.org/
+  home: https://github.com/tdhock/directlabels
   license: GPL-3
-  license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
   summary: An extensible framework for automatically placing direct labels onto multicolor 'lattice'
     or 'ggplot2' plots. Label positions are described using Positioning Methods which
     can be re-used across several different plots. There are heuristics for examining
     "trellis" and "ggplot" objects and inferring an appropriate Positioning Method.
+  license_family: GPL3
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - dpryan79
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
     - nsoranzo
+
+# Package: directlabels
+# Maintainer: Toby Dylan Hocking <toby.hocking@r-project.org>
+# Author: Toby Dylan Hocking
+# Version: 2020.1.31
+# BugReports: https://github.com/tdhock/directlabels/issues
+# License: GPL-3
+# Title: Direct Labels for Multicolor Plots
+# Description: An extensible framework for automatically placing direct labels onto multicolor 'lattice' or 'ggplot2' plots. Label positions are described using Positioning Methods which can be re-used across several different plots. There are heuristics for examining "trellis" and "ggplot" objects and inferring an appropriate Positioning Method.
+# URL: https://github.com/tdhock/directlabels
+# LazyData: true
+# Suggests: MASS, inlinedocs, ggplot2 (>= 2.0), rlang, lattice, alphahull, nlme, lars, latticeExtra, testthat
+# Imports: grid, quadprog
+# Collate: utility.function.R compare.R dotplot.R lineplot.R densityplot.R ggplot2.R positioning.functions.R doc.R lattice.R scatterplot.R contourplot.R
+# NeedsCompilation: no
+# Packaged: 2020-01-31 16:59:38 UTC; th798
+# Repository: CRAN
+# Date/Publication: 2020-02-01 09:10:02 UTC

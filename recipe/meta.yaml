@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://github.com/tdhock/directlabels
-  license: GPL-3
+  license: GPL-3.0-only
   summary: An extensible framework for automatically placing direct labels onto multicolor 'lattice'
     or 'ggplot2' plots. Label positions are described using Positioning Methods which
     can be re-used across several different plots. There are heuristics for examining

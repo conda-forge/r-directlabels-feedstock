@@ -5,11 +5,9 @@ Home: https://github.com/tdhock/directlabels
 
 Package license: GPL-3.0-only
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-directlabels-feedstock/blob/master/LICENSE.txt)
 
 Summary: An extensible framework for automatically placing direct labels onto multicolor 'lattice' or 'ggplot2' plots. Label positions are described using Positioning Methods which can be re-used across several different plots. There are heuristics for examining "trellis" and "ggplot" objects and inferring an appropriate Positioning Method.
-
-
 
 Current build status
 ====================

@@ -1,4 +1,4 @@
-{% set version = "2023.8.25" %}
+{% set version = "2024.1.21" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/directlabels_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/directlabels/directlabels_{{ version }}.tar.gz
-  sha256: 12dd1d50f73876cc1919652f4c98facc77e063d3e03c7b256e8bfbbd3dd0ea5c
+  sha256: bb3ba484ff9486fd8e9ce65073b69ce38e42f1fab2f42822eecfec7823f6b6fe
 
 build:
   merge_build_host: true  # [win]

@@ -1,4 +1,4 @@
-{% set version = "2025.5.20" %}
+{% set version = "2025.6.24" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/directlabels_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/directlabels/directlabels_{{ version }}.tar.gz
-  sha256: ed939f36f599e5a951c097be2b29336c16adaf6e7417976a9a104fec3c6ebe67
+  sha256: fefd094dab12c9641134d4ceb640c9599ab50eac570080e602c44606651814a8
 
 build:
   number: 0

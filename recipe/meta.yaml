@@ -1,4 +1,4 @@
-{% set version = "2025.6.24" %}
+{% set version = "2026.4.23" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/directlabels_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/directlabels/directlabels_{{ version }}.tar.gz
-  sha256: fefd094dab12c9641134d4ceb640c9599ab50eac570080e602c44606651814a8
+  sha256: 4916aad2248b95a36643d268ef7463034223024ab596e03e23eec4439f8004e2
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,8 +36,8 @@ test:
 about:
   home: https://github.com/tdhock/directlabels
   license: GPL-3.0-only
-  summary: An extensible framework for automatically placing direct labels onto multicolor 'lattice' or 'ggplot2' plots. Label positions are described using Positioning Methods which can be re-used across several different plots. There are heuristics for examining "trellis" and "ggplot" objects and inferring an appropriate
-    Positioning Method.
+  summary: An extensible framework for automatically placing direct labels onto multicolor 'lattice' or 'ggplot2' plots. Label positions are described using Positioning Methods which can be re-used across several different plots. There are heuristics for examining "trellis" and "ggplot" objects and inferring an 
+    appropriate Positioning Method.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3

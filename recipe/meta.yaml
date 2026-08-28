@@ -23,10 +23,12 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-quadprog
+    - r-data.table
+    - r-rcpp
   run:
     - r-base
-    - r-quadprog
+    - r-data.table
+    - r-rcpp
 
 test:
   commands:
